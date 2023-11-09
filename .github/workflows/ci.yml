@@ -1,5 +1,5 @@
 name: mastering-ci-cd 
-
+description: this is used to learn the github ci/cd properly for my knowledge. 
 on: [push]
 
 
