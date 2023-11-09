@@ -10,13 +10,5 @@ jobs:
 
     - name: echo the hello world 
       run: echo "hello-world"
-      run: echo "This is running on the event name of the ${{ github.event_name }}"
 
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
-on: [push]
-jobs:
-  Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
-    steps:
-        - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+
