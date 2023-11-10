@@ -13,3 +13,11 @@ jobs:
             - name: cd deployment 
               run: echo 'hello cd'
              
+    learning-literals: 
+        runs-on: ubuntu-latest 
+        env: ## setting the literals 
+            firstEnv: ${{ 'firstEnvVariable'}}
+        steps: 
+            - name: setting literals 
+              run: echo 'grabbing firstEnv value ${{ env.firstEnv}}'
+              
