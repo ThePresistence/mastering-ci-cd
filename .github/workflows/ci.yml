@@ -23,8 +23,8 @@ jobs:
           PORT: 1234 
 
         run: | 
-          python3 ${ DEFALT_PATH}/app.py 
+          python3 $DEFALT_PATH/app.py 
 
-          
+
 
 
