@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: creating custom variable 
-        run: python3 app.py 
+        run: python3 /workspaces/mastering-ci-cd/app.py 
         ## This env variables will be available in the "app.py" file. If you give env variable as a input, you can do like this. 
         env: 
           ARAVIND: aravind
