@@ -35,7 +35,7 @@ jobs:
   saving-the-artificat-job: 
     runs-on: ubuntu-latest 
     needs: [creating-custom-variable-and-passing-to-file]
-    
+    ## artifacts might include binary or package files, test results, screenshots, or log files.
     steps: 
     - shell: bash 
       run: expr 1 + 1 > output.log 
@@ -59,6 +59,14 @@ jobs:
       run: |
         ls
         cat output.log 
+      
+  learning-context: 
+    runs-on: ubuntu-latest
+    needs: [first-job]
+
+    steps: 
+    - name: chekcing the event 
+      if: ${{ github.event_name == 'pull'}}
       
 
 
