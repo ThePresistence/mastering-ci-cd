@@ -56,7 +56,9 @@ jobs:
       with:
         name: output-log-file
     - shell: bash 
-      run: cat output-log-file 
+      run: |
+        ls
+        cat output.log 
       
 
 
