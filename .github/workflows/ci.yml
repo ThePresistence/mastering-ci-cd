@@ -1,5 +1,9 @@
 name: mastering-ci-cd 
-on: [push, pull]
+on: 
+  push: 
+    branches: 
+    - 'main' 
+
 # comment 
 
 
