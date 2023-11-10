@@ -18,7 +18,7 @@ jobs:
         env: ## setting the literals 
             firstEnv: ${{ 'This-is-first-Env-value'}}
             secondEnv: ${{ true }} 
-            thirdEnv: ${{ 'It''s the open source bro::)'}}
+            thirdEnv: ${{ 'It''s open source!'}}
         steps: 
             - name: setting literals 
               run: | 
