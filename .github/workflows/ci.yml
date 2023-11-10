@@ -60,7 +60,7 @@ jobs:
         ls
         cat output.log 
       
-  learning-context: 
+  if-event-is-push-then-only-this-job-will-run: 
     runs-on: ubuntu-latest
     needs: [first-job]
     if: ${{ github.event_name == 'push' }} 
@@ -68,7 +68,20 @@ jobs:
     steps:
     - name: inside-the-if-condition
       run: echo 'hello expresion'
-          
+
+
+  learning-context: 
+    runs-on: ubuntu-latest 
+    needs: [if-event-is-push-then-only-this-job-will-run]
+
+    env: 
+      super: 'yes-this-is-awesome' 
+
+    steps:
+      - shell: bash 
+        run: echo ${{ env.super}}
+        
+
 
       
       
