@@ -11,7 +11,7 @@ jobs:
     steps: 
       - name: echo the hello world 
         run: | 
-            echo "hello-world
+            echo "hello-world"
             timedatectl
 
   creating-custom-variable: 
