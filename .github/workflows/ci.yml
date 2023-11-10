@@ -1,5 +1,5 @@
 name: mastering-ci-cd 
-on: [push]
+on: [push, pull]
 
 
 jobs: 
