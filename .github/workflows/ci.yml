@@ -62,11 +62,14 @@ jobs:
       
   learning-context: 
     runs-on: ubuntu-latest
-    needs: [first-job]
+    if: ${{ github.event_name == 'pull_request' }}
+    steps:
+    - name: inside-the-if-condition
+      run: echo 'hello expresion'
+          
 
-    steps: 
-    - name: chekcing the event 
-      if: ${{ github.event_name == 'pull'}}
+      
+      
       
 
 
