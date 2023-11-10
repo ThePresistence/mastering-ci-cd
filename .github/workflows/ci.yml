@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: echo the hello world 
-      run: | 
+        run: | 
             echo "hello-world
             timedatectl
 
@@ -23,7 +23,6 @@ jobs:
 
         ## This env variables will be available in the "app.py" file. If you give env variable as a input, you can do like this. 
         env: 
-          DEFALT_PATH: /home/runner/work/mastering-ci-cd
           ARAVIND: aravind
           PORT: 1234 
 
