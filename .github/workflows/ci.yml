@@ -23,7 +23,7 @@ jobs:
           PORT: 1234 
 
         run: | 
-          python3 /home/runner/work/mastering-ci-cd/app.py 
+          python3 /workspaces/mastering-ci-cd/app.py 
 
 
 
