@@ -4,15 +4,22 @@ on:
     branches: 
     - 'main' 
 
-# comment 
-
 
 jobs: 
   first-job: 
     runs-on: ubuntu-latest
     steps: 
+      - name: echo the hello world 
+        run: echo "hello-world"
 
-    - name: echo the hello world 
-      run: echo "hello-world"
+  creating-custom-variable: 
+    runs-on: ubuntu-latest
+    steps: 
+      - name: creating custom variable 
+        run: echo "app.py"
+        ## This env variables will be available in the "app.py" file. If you give env variable as a input, you can do like this. 
+        env: 
+          ARAVIND: aravind
+          PORT: 1234 
 
 
