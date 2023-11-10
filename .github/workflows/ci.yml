@@ -7,7 +7,7 @@ on:
 ## setting default values for all the workflows 
 # defaults: 
 #     run: 
-#       shell: bash 
+#       shell: bash
 
 
 jobs: 
@@ -31,6 +31,34 @@ jobs:
           ARAVIND: aravind
           PORT: 1234 
       - run: bash ./script.sh
+
+  saving-the-artificat-job: 
+    runs-on: ubuntu-latest 
+    needs: [creating-custom-variable-and-passing-to-file]
+    
+    steps: 
+    - shell: bash 
+      run: expr 1 + 1 > outupt.log 
+      
+    - name: Upload output file
+      uses: actions/upload-artifact@v3
+      with:
+        name: output-log-file
+        path: output.log
+
+  downloading-the-artificat-job: 
+    runs-on: ubuntu-latest
+    needs: [saving-the-artificat-job]
+
+    steps: 
+    - name: download the file 
+      uses: actions/download-artifact@v3
+      with:
+        name: output-log-file
+    - shell: bash 
+      run: cat output-log-file 
+      
+
 
   
 
