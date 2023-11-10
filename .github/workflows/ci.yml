@@ -18,10 +18,10 @@ jobs:
       - name: creating custom variable 
         ## This env variables will be available in the "app.py" file. If you give env variable as a input, you can do like this. 
         env: 
-          GITHUB_WORKSPACE: /home/runner/work/mastering-ci-cd
+          DEFALT_PATH: /home/runner/work/mastering-ci-cd
           ARAVIND: aravind
           PORT: 1234 
 
-        run: echo ${GITHUB_WORKSPACE}
+        run: echo ${DEFALT_PATH}
 
 
