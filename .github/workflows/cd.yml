@@ -1,0 +1,15 @@
+name: checking-the-parallelism
+on: [push]
+
+
+defaults: 
+    run: 
+        shell: bash
+
+jobs: 
+    first-job-cd: 
+        runs-on: ubuntu-latest 
+        steps: 
+            - name: cd deployment 
+              run: echo 'hello cd'
+             
