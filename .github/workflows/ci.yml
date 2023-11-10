@@ -10,7 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: echo the hello world 
-        run: echo "hello-world"
+      run: | 
+            echo "hello-world
+            timedatectl
 
   creating-custom-variable: 
     runs-on: ubuntu-latest
