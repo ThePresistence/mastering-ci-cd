@@ -22,6 +22,9 @@ jobs:
           ARAVIND: aravind
           PORT: 1234 
 
-        run: echo ${DEFALT_PATH}
+        run: | 
+          python3 ${ DEFALT_PATH}/app.py 
+
+          
 
 
