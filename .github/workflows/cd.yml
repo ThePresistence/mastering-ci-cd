@@ -21,5 +21,6 @@ jobs:
             thirdEnv: ${{ 'It''s the open source bro::)'}}
         steps: 
             - name: setting literals 
-              run: echo 'grabbing firstEnv value ${{ env.firstEnv}}'
-              run: echo 'grabbing the thirdEnv value ${{ env.thirdEnv}}'
+              run: | 
+               echo 'grabbing firstEnv value ${{ env.firstEnv}}'
+               echo 'grabbing the thirdEnv value ${{ env.thirdEnv}}'
