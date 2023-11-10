@@ -17,7 +17,7 @@ jobs:
         runs-on: ubuntu-latest 
         env: ## setting the literals 
             firstEnv: ${{ 'This-is-first-Env-value'}}
-            thirdEnv: ${{ 'It''s open source!'}}
+            thirdEnv: ${{ 'Its open source!'}}
         steps: 
             - name: setting literals 
               run: | 
