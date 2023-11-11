@@ -31,7 +31,7 @@ jobs:
             MYENV: ${{ github.ref == 'aravind' || 'super duper'}}
           
           run: |
-            echo ${{ github.ref}}
+            echo ${{env.MYENV}}
             echo contains('Hellow world', 'llo')
 
     learning-functions: 
