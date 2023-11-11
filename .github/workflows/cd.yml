@@ -1,5 +1,5 @@
 name: checking-the-parallelism
-on: [push]
+on: [pull_request]
 
 
 defaults: 

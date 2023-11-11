@@ -1,6 +1,6 @@
 name: mastering-ci-cd 
 on: 
-  push: 
+  pull_request: 
     branches: 
     - 'main' 
 
