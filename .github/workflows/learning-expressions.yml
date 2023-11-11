@@ -7,6 +7,8 @@ jobs:
     learning-literals: 
         runs-on: ubuntu-latest 
         steps: 
+        - name: downloading repository 
+          uses: actions/checkout@v4
         - name: learning-literals 
           env: 
             myNull: ${{ null }}
@@ -29,7 +31,7 @@ jobs:
             MYENV: ${{ github.ref == 'aravind' || 'super duper'}}
           
           run: |
-            echo "github.ref name ${{ github.ref}}"
+            echo 'github.ref name ${{ github.ref}}'
             echo contains('Hellow world', 'llo')
 
     learning-functions: 
@@ -50,7 +52,7 @@ jobs:
         - name: The job has failed
           if: ${{ failure() }}
           run: echo "This job is failed"
-          
+
     
 
 
