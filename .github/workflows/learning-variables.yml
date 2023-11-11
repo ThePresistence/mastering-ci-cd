@@ -16,3 +16,15 @@ jobs:
         run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
         env:
           First_Name: Mona
+
+        
+  conditon_job: 
+    runs-on: macos-latest 
+    steps: 
+        - name: condition1 
+          if: runner.os == 'Windows'
+          run: echo "The operating system on the runner IS WINDOWS"
+
+        - name: condition 2
+          if: runner.os == 'macos'
+          run: echo "this is macos operating system"
