@@ -1,0 +1,56 @@
+name: learning-expressions
+
+on: 
+  push 
+
+jobs: 
+    learning-literals: 
+        runs-on: ubuntu-latest 
+        steps: 
+        - name: learning-literals 
+          env: 
+            myNull: ${{ null }}
+            myString: ${{ 'It''s is the most beautiful thing'}}
+            myBoolean: ${{ false }}
+            myIntegerNumber: ${{ 711 }}
+            myFloatNumber: ${{ -9.2 }}
+            myHexNumber: ${{ 0xff }}
+            myExponentialNumber: ${{ -2.99e-2 }}
+            myStringInBraces: ${{ 'It''s open source!' }}
+
+          run: python ./apps.py 
+
+    learning-operators: 
+        runs-on: ubuntu-latest
+        steps: 
+        - name: learning-operators
+
+          env: 
+            MYENV: ${{ github.ref == 'aravind' || 'super duper'}}
+          
+          run: |
+            echo "github.ref name ${{ github.ref}}"
+            echo contains('Hellow world', 'llo')
+
+    learning-functions: 
+        runs-on: ubuntu-latest
+        steps: 
+        - name: learning-functions 
+          if: ${{ success()}}
+          run: echo "All the stops are done ohhh yahhh"
+    
+        - name: learning-functions-2
+          if: ${{ always()}}
+          run: echo "This is from always"
+
+        - name: learning-functions-3
+          if: ${{ cancelled()}}
+          run: echo "This worklow is cancelled"
+
+        - name: The job has failed
+          if: ${{ failure() }}
+          run: echo "This job is failed"
+          
+    
+
+
