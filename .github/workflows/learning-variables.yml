@@ -25,7 +25,7 @@ jobs:
     runs-on: ${{ matrix.os}}
     steps: 
         - name: condition1 
-          if: runner.os == 'Windows'
+          if: runner.os == 'ubuntu'
           run: echo "The operating system on the runner IS WINDOWS"
 
         - name: condition 2
