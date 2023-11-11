@@ -1,6 +1,6 @@
 name: learning-context
 on: 
-    push 
+    pull_request 
 
 jobs:
     learning_context: 
@@ -10,3 +10,5 @@ jobs:
               env: 
                 GITHUB_CONTEXT: ${{ toJson(runner)}}
               run: echo "$GITHUB_CONTEXT"
+
+
