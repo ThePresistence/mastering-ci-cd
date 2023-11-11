@@ -32,7 +32,6 @@ jobs:
           
           run: |
             echo ${{env.MYENV}}
-            echo contains('Hellow world', 'llo')
 
     learning-functions: 
         runs-on: ubuntu-latest
