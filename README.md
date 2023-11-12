@@ -13,6 +13,6 @@ practicing-my-ci-cd-skills
 
 ## Status of the workflow deployment: 
 
-![example-workflow](https://github.com/ThePresistence/mastering-ci-cd/actions/workflows/ci.yml)
+![example-workflow](https://github.com/ThePresistence/mastering-ci-cd/actions/workflows/ci.yml/badge.svg)
 
 ![example workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
