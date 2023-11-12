@@ -23,3 +23,4 @@ jobs:
               run: | 
                echo "grabbing firstEnv value ${{ env.firstEnv}}"
                echo "grabbing the thirdEnv value ${{ env.thirdEnv}}"
+               echo "this is for checkig the error $${{env.nothing}}"
