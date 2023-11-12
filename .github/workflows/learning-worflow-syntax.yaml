@@ -1,0 +1,46 @@
+name: learning-workflow-syntax
+run-name: this-is-run-name 
+
+on:
+    push: 
+        branches: 
+            - main 
+            - feature
+        tags: 
+            - v1
+            - '!v2'
+
+        paths: 
+            - '***.py'
+            - '****.py'
+
+        # tags-ignore: 
+        #     - v3
+    label: 
+        types: 
+            - created 
+    pull_request: 
+        branches: 
+            - main 
+            - '!releases/**'
+        # branches-ignore: 
+        #     - 'mona/octocat'
+
+    workflow_call: 
+        inputs: 
+            username: 
+                description: "A suernaem passed"
+                default: 'jon-doe'
+                type: string 
+                required: false 
+
+        
+
+
+    
+
+jobs: 
+    first-job: 
+        runs-on: ubuntu-latest
+        steps: 
+        - run: echo ls
