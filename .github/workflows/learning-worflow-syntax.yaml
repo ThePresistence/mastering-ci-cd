@@ -47,4 +47,4 @@ jobs:
     first-job: 
         runs-on: ubuntu-latest
         steps: 
-        - run: echo ls
+        - run: echo '${{ inputs.username}}'
