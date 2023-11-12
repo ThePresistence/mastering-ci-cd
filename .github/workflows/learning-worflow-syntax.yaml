@@ -2,7 +2,7 @@ name: learning-workflow-syntax
 run-name: this-is-run-name 
 
 on:
-    push: 
+    # push: 
     #     branches: 
     #         - main 
     #         - feature
@@ -10,8 +10,8 @@ on:
     #         - v1
     #         - '!v2'
 
-        paths: 
-            - '**.py'
+        # paths: 
+        #     - '**.py'
 
 
         # tags-ignore: 
@@ -26,7 +26,11 @@ on:
         # branches-ignore: 
         #     - 'mona/octocat'
 
-    workflow_call: 
+
+## workflow_dispatch is mannual 
+## workflow_call is called by another workflow 
+## workflow_run runs the code if another (needs) workflow completed by some other worflow file 
+    workflow_dispatch: 
         inputs: 
             username: 
                 description: "A suernaem passed"
