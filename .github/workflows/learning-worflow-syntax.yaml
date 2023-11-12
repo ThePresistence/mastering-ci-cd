@@ -11,8 +11,8 @@ on:
             - '!v2'
 
         paths: 
-            - '***.py'
-            - '****.py'
+            - '**.py'
+
 
         # tags-ignore: 
         #     - v3
