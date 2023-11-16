@@ -22,7 +22,7 @@ jobs:
               uses: restackio/update-json-file-action@v2.0
               with:
                 file: ./definition.json
-                fields: "{'TASKS': ${{ inputs.task_json}} }"
+                fields: '{"TASKS": ${{ inputs.task_json}}'
 
             - name: showing the ouput 
               run: cat ./definition.json
