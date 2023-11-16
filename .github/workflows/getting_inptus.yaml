@@ -13,6 +13,19 @@ jobs:
         runs-on: ubuntu-latest 
 
         steps: 
-            - name: pasting it properly 
+            - name: echo the input  
               run: echo The json is ${{ inputs.task_json }}
+
+            - name: updating the json bro 
+              id: update-json 
+              uses: restack/update-json-file-action@v1.1
+              with:
+                file: ./definition.json
+                fields: "{'TASKS': ${{ inputs.task_json}} }"
+
+            - name: showing the ouput 
+              run: cat ./definition.json
+
+
+
 
