@@ -23,6 +23,12 @@ jobs:
                 sed -i "s|##OUTPUT##|$USER_JSON|g" $INPUT_FILE
                 cat ./definition.json
 
+            - name: commit 
+              run: | 
+                git add . 
+                git commit -m "added"
+                git push 
+
 
 
 
