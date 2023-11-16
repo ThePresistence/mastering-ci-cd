@@ -8,6 +8,11 @@ on:
                 required: true 
                 type: string 
 
+env: 
+  USER_JSON: ${{ inputs.task_json }}
+  INPUT_FILE: ./definition.json
+
+
 jobs: 
     pasting-properly:  
         runs-on: ubuntu-latest 
@@ -16,11 +21,10 @@ jobs:
             - name: echo the input  
               run: echo The json is ${{ inputs.task_json }}
 
-              env: 
-                USER_JSON: inputs.task_json
-                INPUT_FILE: ./definition.json
+
 
             - uses: actions/checkout@v3
+
 
             # - name: updating the json bro 
             #   uses: restackio/update-json-file-action@v2.0
