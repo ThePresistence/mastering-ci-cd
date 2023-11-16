@@ -35,7 +35,7 @@ jobs:
             #   run: cat ./definition.json
             - name: now we are changing 
               run: | 
-                sed -i "s|##BRANCH##|$USER_JSON|g" $INPUT_FILE
+                sed -i "s|##OUTPUT##|$USER_JSON|g" $INPUT_FILE
                 cat ./definition.json
 
 
