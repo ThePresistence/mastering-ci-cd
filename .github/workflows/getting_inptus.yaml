@@ -16,6 +16,8 @@ jobs:
             - name: echo the input  
               run: echo The json is ${{ inputs.task_json }}
 
+            - uses: actions/checkout@v3
+
             - name: updating the json bro 
               uses: restackio/update-json-file-action@v2.0
               with:
