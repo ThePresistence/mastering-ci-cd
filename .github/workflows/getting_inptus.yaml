@@ -16,16 +16,23 @@ jobs:
             - name: echo the input  
               run: echo The json is ${{ inputs.task_json }}
 
+              env: 
+                USER_JSON: inputs.task_json
+
             - uses: actions/checkout@v3
 
-            - name: updating the json bro 
-              uses: restackio/update-json-file-action@v2.0
-              with:
-                file: ./definition.json
-                fields: '{"TASKS": ${{ inputs.task_json}} }'
+            # - name: updating the json bro 
+            #   uses: restackio/update-json-file-action@v2.0
+            #   with:
+            #     file: ./definition.json
+            #     fields: '{"TASKS": ${{ inputs.task_json}} }'
+            # - name: showing the ouput 
+            #   run: cat ./definition.json
+            - name: now we are changing 
+              run: | 
+                sed -i "s|##BRANCH##|$USER_JSON|g" 
+                cat ./definition.json
 
-            - name: showing the ouput 
-              run: cat ./definition.json
 
 
 
