@@ -17,8 +17,7 @@ jobs:
               run: echo The json is ${{ inputs.task_json }}
 
             - name: updating the json bro 
-              id: update-json 
-              uses: restack/update-json-file-action@v1.1
+              uses: restackio/update-json-file-action@v2.0
               with:
                 file: ./definition.json
                 fields: "{'TASKS': ${{ inputs.task_json}} }"
